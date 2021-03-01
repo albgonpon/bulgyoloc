@@ -1,34 +1,38 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "lib": [
+      "es5",
+      "es2015",
+      "es2015.promise",
+      "dom",
+      "scripthost"
+    ],
     "module": "amd",
     "noImplicitAny": false,
     "sourceMap": true,
     "jsx": "react",
     "jsxFactory": "tsx",
     "target": "es5",
-    "lib": ["es5", "es6", "dom", "scripthost"],
-    "moduleResolution": "node",
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "preserveConstEnums": true,
-    "declaration": false,
     "suppressImplicitAnyIndexErrors": true,
-    "outDir": "./dist",
-    "importHelpers": true,
-    "esModuleInterop": true
+    "paths": {
+      "arcgis-components/*": ["dist/js/arcgis-components/dist/*"]
+    },
+    "types": ["arcgis-js-api"]
   },
   "include": [
-    "./**/*",
-    "./src/app/Components/InteractiveLegend",
-    "./src/app/Components/Screenshot",
-    "./src/app/interfaces"
+    "./app/**/*", "nls"
   ],
-  "exclude": ["./node_modules", "./tsrules", "./src/app/application-base-js"],
+  "exclude": [
+    "./app/@esri/**/*",
+    "./node_modules",
+    "./tsrules"
+  ],
   "files": [
-    "./src/app/application-base-js/index.d.ts",
     "./node_modules/@types/arcgis-js-api/index.d.ts",
-    "./src/app/Components/Screenshot/Screenshot/interfaces/interfaces.d.ts",
-    "./src/app/telemetry/index.d.ts",
-    "./src/app/interfaces/interfaces.d.ts",
     "./node_modules/dojo-typings/dojo/1.11/loader.d.ts",
     "./node_modules/dojo-typings/dojo/1.11/index.d.ts",
     "./node_modules/dojo-typings/dojo/1.11/modules.d.ts",
