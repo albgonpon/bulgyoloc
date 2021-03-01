@@ -48,10 +48,10 @@
       "debug": false,
       "disabled": false,
       "amazon": {
-        "userPoolID": "us-east-1:7345bcf2-bffa-4849-a379-a83178f63eef",
+        "userPoolID": "2c3a8ab4394541868db49a2d156daff7",
         "app": {
           "name": "InteractiveLegend",
-          "id": "eadf587070d04c86b747a938cc655e76",
+          "id": "2c3a8ab4394541868db49a2d156daff7",
           "version": "1.0"
         }
       }
@@ -72,7 +72,7 @@
       "debug": true,
       "disabled": false,
       "amazon": {
-        "userPoolID": "us-east-1:7345bcf2-bffa-4849-a379-a83178f63eef",
+        "userPoolID": "2c3a8ab4394541868db49a2d156daff7",
         "app": {
           "name": "InteractiveLegend",
           "id": "2c3a8ab4394541868db49a2d156daff7",
