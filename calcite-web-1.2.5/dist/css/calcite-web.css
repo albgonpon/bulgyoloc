@@ -2979,10 +2979,10 @@ blockquote p {
       font-size: 1.0625rem; } }
 
 a {
-  color: #0079c1;
+  color: #ff6743;
   text-decoration: none; }
   a:hover {
-    color: #005e95;
+    color: #ff6743;
     text-decoration: underline; }
 
 ul, ol {
