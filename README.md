@@ -1,3 +1,6 @@
+![BulgyoLocLogo](images/header.png)
+
+
 # BulgyoLoc, a geographical approach to Korean Buddhism.
 
 Temples play a pivotal role in the development and stabilization of religious movements, especially in the case of imported religions, in which the new religions have to find their way through already established beliefs, rituals, and cultural traditions. Through accessible technology, easy to understand and operate, an overview of the panorama of Buddhist temples throughout the Korean Peninsula can be consulted in BulgyoLoc. 
