@@ -2755,10 +2755,10 @@ blockquote p {
       font-size: 1.0625rem; } }
 
 a {
-  color: #0079c1;
+  color: #ff6743;
   text-decoration: none; }
   a:hover {
-    color: #005e95;
+    color: #ff6743;
     text-decoration: underline; }
 
 ul, ol {
@@ -3444,9 +3444,9 @@ html[lang="vi"] body, html.vi body {
   padding: 0.375rem 1rem;
   width: auto;
   color: #ffffff;
-  border: 1px solid #0079c1;
+  border: 1px solid #ff6743;
   border-radius: 0;
-  background-color: #0079c1;
+  background-color: #ff6743;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -3458,26 +3458,26 @@ html[lang="vi"] body, html.vi body {
   .btn:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: #005e95;
-    border-color: #005e95; }
+    background-color: #ff6743;
+    border-color: #ff6743; }
 
 .btn-transparent {
   background: none;
-  color: #0079c1;
+  color: #ff6743;
   border: none; }
   .btn-transparent:hover {
-    color: #005e95;
+    color: #ff6743;
     background: none;
     text-decoration: underline; }
 
 .btn-clear {
-  color: #0079c1;
+  color: #ff6743;
   background: #ffffff;
-  border-color: #0079c1; }
+  border-color: #ff6743; }
   .btn-clear:hover {
     color: #ffffff;
-    background: #005e95;
-    border-color: #005e95; }
+    background: #ff6743;
+    border-color: #ff6743; }
 
 .btn-clear-white {
   background: none;
