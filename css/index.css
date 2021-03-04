@@ -440,7 +440,8 @@ calcite-shell[theme="dark"] > calcite-shell-panel {
       margin-left: 15px;
       font-size: 18px;
       font-weight: 500;
-      line-height: 16.35px; }
+      line-height: 16.35px; 
+      color: #ff6743}
 
 .embed-app__view-container {
   width: 100%;
