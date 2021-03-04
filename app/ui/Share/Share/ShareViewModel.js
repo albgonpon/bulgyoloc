@@ -86,11 +86,6 @@ define(["require", "exports", "esri/core/Accessor", "esri/core/Collection", "esr
         name: "Twitter",
         urlTemplate: "https://twitter.com/intent/tweet?text={summary}&url={url}"
     });
-    var GITHUB = new ShareItem({
-        id: "github",
-        name: "GitHub",
-        urlTemplate: "https://github.com/albgonpon/bulgyoloc"
-    });
     //----------------------------------
     //
     //  Shorten URL API
@@ -158,8 +153,7 @@ define(["require", "exports", "esri/core/Accessor", "esri/core/Collection", "esr
             //----------------------------------
             _this.shareItems = new ShareItemCollection([
                 FACEBOOK_ITEM,
-                TWITTER_ITEM,
-                GITHUB ITEM
+                TWITTER_ITEM
             ]);
             //----------------------------------
             //
