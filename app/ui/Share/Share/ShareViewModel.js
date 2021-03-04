@@ -76,10 +76,10 @@ define(["require", "exports", "esri/core/Accessor", "esri/core/Collection", "esr
     //  Default Share Items
     //
     //----------------------------------
-    var FACEBOOK_ITEM = new ShareItem({
-        id: "facebook",
-        name: "Facebook",
-        urlTemplate: "https://www.facebook.com/sharer/sharer.php?s=100&u={url}"
+    var GITHUB_ITEM = new ShareItem({
+        id: "github",
+        name: "GitHub",
+        urlTemplate: "https://github.com/albgonpon/bulgyoloc"
     });
     var TWITTER_ITEM = new ShareItem({
         id: "twitter",
@@ -152,7 +152,7 @@ define(["require", "exports", "esri/core/Accessor", "esri/core/Collection", "esr
             //
             //----------------------------------
             _this.shareItems = new ShareItemCollection([
-                FACEBOOK_ITEM,
+                GITHUB_ITEM,
                 TWITTER_ITEM
             ]);
             //----------------------------------

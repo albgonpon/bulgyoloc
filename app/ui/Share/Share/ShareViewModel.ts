@@ -51,10 +51,10 @@ const ShareItemCollection = Collection.ofType<ShareItem>(ShareItem);
 //  Default Share Items
 //
 //----------------------------------
-const FACEBOOK_ITEM = new ShareItem({
-  id: "facebook",
-  name: "Facebook",
-  urlTemplate: "https://www.facebook.com/sharer/sharer.php?s=100&u={url}"
+const GITHUB_ITEM = new ShareItem({
+  id: "github",
+  name: "GitHub",
+  urlTemplate: "https://github.com/albgonpon/bulgyoloc"
 });
 const TWITTER_ITEM = new ShareItem({
   id: "twitter",
@@ -193,7 +193,7 @@ class ShareViewModel extends (Accessor) {
     type: ShareItemCollection
   })
   shareItems: Collection<ShareItem> = new ShareItemCollection([
-    FACEBOOK_ITEM,
+    GITHUB_ITEM,
     TWITTER_ITEM
   ]);
 
