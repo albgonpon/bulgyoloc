@@ -1,4 +1,4 @@
-![BulgyoLocLogo](../app/assets/header.png)
+![BulgyoLocLogo](../assets/header.png)
 
 
 # BulgyoLoc, a geographical approach to Korean Buddhism.
