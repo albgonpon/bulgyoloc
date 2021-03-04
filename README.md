@@ -1,82 +1,66 @@
-# Interactive Legend
+# Embed app
 
-Interactive Legend is a configurable app template where the core functionality revolves around an interactive filter tool. This configurable app template provides end-users with an experience to filter features on a web map via selectable legend elements.
+      	const button = document.createElement("button");
+			button.innerHTML = "Update logic";
+			button.addEventListener("click", () => {
+				// is true even if not legend or details it'll show up
+				// also if legendopenat start is set to true here for the first 
+				// time it won't display the legend. 
+				//this.appConfig.legend = !this.appConfig.legend;
+				//	this.appConfig.legendOpenAtStart = !this.appConfig.legendOpenAtStart;
+				this._appConfig.layoutType = this._appConfig.layoutType === "default" ? "horizontal" : "default";
 
-![Interactive Legend Preview](images/interactive-legend.png)
+				//this.appConfig.details = !this.appConfig.details;
+				//this.appConfig.title = "HELLO"
+				//  this.appConfig.header = !this.appConfig.header;
+				//this.appConfig.home = !this.appConfig.home;
+				//this.appConfig.homePosition = "bottom-right";
+				//this.appConfig.scalebar = !this.appConfig.scalebar;
+				//this.appConfig.scalebarPosition = "top-right";
+				//
+				// this.appConfig.disableScroll = !this.appConfig.disableScroll;
 
-## 8.2 Release Updates
+				//this.appConfig.basemapTogglePosition = "top-right";
+				//this.appConfig.basemapToggle = !this.appConfig.basemapToggle;
+				// this.appConfig.searchConfiguration = {
+				//  popupEnabled: false
+				// }
+				//this.appConfig.searchPosition = "bottom-right";
+				// this.appConfig.search = !this.appConfig.search;
 
-1. Updated ArcGIS JSAPI to v4.16
+				// this.appConfig.share = !this.appConfig.share;
+				//	this.appConfig.shareIncludeSocial = !this.appConfig.shareIncludeSocial;
+				//this.appConfig.theme = this.appConfig.theme === "dark" ? "light" : "dark";
+				//this.appConfig.applySharedTheme = !this.appConfig.applySharedTheme;
+			});
+			view.ui.add(button, "top-right");
+Notes: calcite-icons can be found here: https://esri.github.io/calcite-ui-icons/#
 
-2. Removed usage of dojo declared and TS directives
+layoutType: horizontal, default
 
-3. Supports 'Instant apps' new configuration experience.
+# Configuration Options 
 
-4. Property name updates.
+* **layout** : Modify the layout appearance. Current supported values are **default|horizontal**. 
+  
+* **theme**: Choose a color theme for the app. Valid values are **light|dark**. If you have specified a preference via OS or browser for a light or dark theme the app will respect that if it hasn't been configured. 
 
-## Features
+* **disableScroll**: Set this to true to prevent scroll and single finger pan. This can be useful when embedding the app into another site that the user will view on a mobile device. Default value is false. 
 
-Select from two different filter modes:
+* **mapZoom** : When true display the map zoom in/out controls. Set **mapZoomPosition** to **top-right|bottom-right|top-left|bottom-left** to modify the default position. 
 
-1. Feature Filter: Layer data features that fall within the criteria of the selected legend elements will display on the map view.
-2. Mute: Opacity and gray scale will be applied to layer data features that do not fall within the criteria of the selected legend elements.
+* **header**: Add a header to the app that displays a title. By default the app title is used. Specify **title** to specify a custom title.  Set **logo** and optionally **logoLink** to add a clickable logo to the header. 
 
-   a. Both opacity and gray scale values are configurable
+* **details**: When true add a panel with descriptive information to the app by default the app will use the web map description. **detailsContent**: Specify this to provide custom descriptive info. **detailsOpenAtStart**: Set this to true to open the panel with descriptive info when the application loads. 
 
-Select from a set of map tools:
+* **legend**: When true add the legend in a panel to the app. **legendOpenAtStart**: When true show the legend panel open by default when the app loads. 
 
-- Home
-- Zoom
-- Layer List
-- Screenshot
-- Basemap Toggle
-- Search
-- Help - panel consisting of preset introductory information
-- Splash
-- Custom Header
+* **basemapToggle**: When true add the basemap toggle to the map. Use **nextBasemap** to change the next basemap from **streets-vector** to one of the other valid named basemap values. Named basemap values are **topo|streets|satellite|hybrid|dark-gray|gray|national-geographic|oceans|osm|terrain|dark-gray-vector|gray-vector|streets-vector|streets-night-vector|streets-navigation-vector|topo-vector|streets-relief-vector** Modify the **basemapTogglePosition** to specify where the control is displayed on the map. Valid values are **top-right|bottom-right|top-left|bottom-left**. 
 
-## Instructions
 
-1. Fork and then clone the repo.
-2. Run `npm install`
-3. Host on local web server.
-4. Open web browser.
-5. Click on dist directory within browser tab.
-6. Test with different web maps.
+**scalebar** When true adds a scalebar at the **scalebarPosition** location. 
 
-## Requirements
+**home**: When true adds the home button at the **homePosition** location.
 
-- Notepad or your favorite HTML editor
-- Web browser with access to the Internet
+**popupPanel**: When true the popup content will display in a popup panel activated from a tool in the side bar. On mobile the popup panel content will be displayed in a panel activated from a tool available in the bottom toolbar. **popupHover**: When popup panel is true there will be an option to display popup content on mouse hover. 
 
-## Resources
-
-- [ArcGIS for JavaScript API Resource Center](http://help.arcgis.com/en/webapi/javascript/arcgis/index.html)
-- [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
-- [twitter@esri](http://twitter.com/esri)
-
-## Issues
-
-Find a bug or want to request a new feature? Please let us know by submitting an issue.
-
-## Contributing
-
-Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
-
-## Licensing
-
-Copyright 2020 Esri
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-A copy of the license is available in the repository's [license.txt](License.txt) file.
+**bookmarks**: When true the bookmark widget is displayed in the position specified by **bookmarksPosition**. 
